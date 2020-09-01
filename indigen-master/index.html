@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="FR">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Indigen</title>
+	<meta name="author" content="Alvaro Trigo Lopez" />
+	<meta name="description" content="fullPage looping demo." />
+	<meta name="keywords"  content="fullpage,jquery,looping,loop,loopTop,loopBottom,demo" />
+	<meta name="Resource-type" content="Document" />
+
+
+	<link rel="stylesheet" type="text/css" href="include/css/fullpage.css" />
+	<link rel="stylesheet" type="text/css" href="include/css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="include/css/style.css" />
+	<!-- <link rel="stylesheet" type="text/css" href="include/css/style4.css" /> -->
+
+
+	<!--[if IE]>
+		<script type="text/javascript">
+			 var console = { log: function() {} };
+		</script>
+	<![endif]-->
+</head>
+<body>
+<ul id="menu">
+  <div>
+  	<ul>
+		  <li data-menuanchor="firstPage" class="active"><a href="#firstPage">HOME</a></li>
+		  <li data-menuanchor="secondPage"><a href="#secondPage">QUI SOMMES NOUS</a></li>
+		  <li data-menuanchor="3rdPage"><a href="#3rdPage">CONTACT</a></li>
+  	</ul>
+  </div>	
+  <div>
+  	<ul>
+	    <!-- <li class="en" data-menuanchor=""><a href="">EN</a></li> -->
+	    <li class="fr" data-menuanchor=""><a href="">FR</a></li>
+    </ul>
+  </div>
+</ul>
+
+<div id="fullpage">
+	<div class="section " id="section0">
+		
+		<h1>INDIGEN</h1>
+		
+		<p>BIENVENUE</p><br>
+	
+	
+		<a href="#" target="blank"><img class="portfolio1-img" src="include/img/logoindigen.png" alt="project 1" /></a>
+				
+		
+	
+	 </div>
+	<div class="section" id="section1">
+		<div class="slide" id="slide1">
+			<figure class="img-container">
+			<a href="page2.php" target="blank"><img class="portfolio-img" src="include/img/notresocieten.jpg" alt="project 1" /></a>
+				<figcaption>Notre Société</figcaption>
+			</figure>
+		</div>
+		<div class="slide" id="slide2">
+			<figure class="img-container">
+				<a href="page3.php" target="blank"><img class="portfolio-img" src="include/img/nosrefsn.jpg" alt="project 2" /></a>
+				<figcaption>Nos Références</figcaption>
+			</figure>
+		</div>
+		<div class="slide" id="slide3">
+			<figure class="img-container">
+				<a href="page4.php" target="blank"><img class="portfolio-img" src="include/img/notreequipen.jpg" alt="project 3" /></a>
+					<figcaption>Notre Equipe</figcaption>
+			</figure>
+		</div>
+	</div> 
+
+	<div class="section" id="section2">
+		
+
+		<!-- <div class ="intro"> -->
+			<!-- <h1>Contact</h1> -->
+
+			<!-- <form method="post" action="ajout_commentaires.php">
+				<fieldset>
+					 <legend><h2>Prennez Contact avec Nous</h2></legend> -->
+					<!-- <p><label>Dâte</label> <input type="date" id="commentaire_date" name="date" value="2020-04-30" /></p> -->
+					<!-- <p><label>Titre</label> <input type="text" id="commentaire_texte" name="titre" ></p>
+					<p><label for="message">
+					Votre Message</label><textarea name="message" id="commentaire_texte" class="message"placeholder="Type Your message" ></textarea></p>
+					<input type="submit" id="cancel" value="Annuler" /><br> <input type="submit" id="submit" value="Envoyer" style= border: 1% solid black;/>
+				</div> --> 
+		<div class="intro">
+			<h1>Contact</h1>			
+			<form method="POST" id="contact-form"  action="ajout_commentaires.php" >				
+				<label for="name">Nom</label><input type="text" name="name" id="name" class="input-area" required/>
+				<label for="mail">e-Mail</label><input type="text" name="mail" id="mail"  class="input-area" required/>
+				<label for="message">Message</label><textarea name="message" id="message"  rows="8" placeholder="Type Your message" required></textarea>
+				<div class="buttons">
+					<input type="submit" name="send" value="Envoyer" />
+					<input type="reset" name="reset" />
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<footer>
+	<img class="logoindigen" src="logoindigen.png" alt="logo" />
+
+</footer>
+
+
+<script type="text/javascript" src="include/js/fullpage.js"></script>
+<script type="text/javascript" src="include/js/examples.js"></script>
+<script type="text/javascript">
+    var myFullpage = new fullpage('#fullpage', {
+        sectionsColor: ['#1bbc9b', '#4BBFC3', '#7BAABE'],
+        anchors: ['firstPage', 'secondPage', '3rdPage'],
+        menu: '#menu',
+        loopTop: true,
+        loopBottom: true,
+        navigation: true,
+        navigationPosition: 'right',
+        slidesNavigation: true
+    });
+</script>
+
+</body>
+</html>
